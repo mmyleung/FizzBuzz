@@ -9,6 +9,10 @@ for (let i = 1; i < 101; i++) {
         printText.push("Buzz");
     }
 
+    if (i % 7 === 0) {
+        printText.push("Bang");
+    }
+
     if (printText.length === 0) {
         printText.push(i);
     }
