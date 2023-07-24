@@ -1,15 +1,15 @@
 for (let i = 1; i < 101; i++) {
     const printText = [];
 
-    if(i % 3 === 0) {
+    if(isDivisible(i, 3)) {
         printText.push("Fizz");
     }
 
-    if (i % 5 === 0) {
+    if (isDivisible(i, 5)) {
         printText.push("Buzz");
     }
 
-    if (i % 7 === 0) {
+    if (isDivisible(i, 7)) {
         printText.push("Bang");
     }
 
@@ -18,4 +18,8 @@ for (let i = 1; i < 101; i++) {
     }
     
     console.log(printText.join(""));
+}
+
+function isDivisible (i, num) {
+    return (i % num === 0);
 }
